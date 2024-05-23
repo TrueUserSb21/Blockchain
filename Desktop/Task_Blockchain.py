@@ -65,12 +65,15 @@ class Blockchain:
 
 # Функция для подключения к базе данных
 def connect_db():
-    conn = psycopg2.connect(dbname='postgres', user='postgres', password='12345', host='localhost')
-    cursor = conn.cursor()
-    cursor.execute('SELECT * FROM public.players')
-    df = cursor.fetchall()
-    df = pd.DataFrame(df, columns=['user_id', 'user_name', 'user_mail', 'user_city', 'tracking_hash', 'updated_at'])
-    return df
+    #conn = psycopg2.connect(dbname='postgres', user='postgres', password='12345', host='localhost')
+    #cursor = conn.cursor()
+    #cursor.execute('SELECT * FROM public.players')
+    
+    #df = cursor.fetchall()
+    trace_ex= r'C:\Users\bokar\Desktop\DATABASE.xlsx'
+    df=pd.read_excel(trace_ex, 'Лист1')
+    #df = pd.DataFrame(df, columns=['user_id', 'user_name', 'user_mail', 'user_city', 'tracking_hash', 'updated_at'])
+    #return df
 
 # Получаем данные из базы данных
 database = connect_db()
