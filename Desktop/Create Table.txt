@@ -1,0 +1,16 @@
+CREATE TABLE players (
+	user_id SERIAL PRIMARY KEY,
+	user_name VARCHAR(100) NOT NULL,
+	user_mail VARCHAR(100) NOT NULL,
+	user_city VARCHAR(100) NOT NULL,
+	user_country VARCHAR(100) NOT NULL,
+	user_desc VARCHAR(100) NOT NULL
+);
+
+INSERT INTO players(user_id, user_name, user_mail, user_city, user_country, user_desc)
+VALUES 
+	(2, 'Liara', '2@gmail.com', 'manch0', 'USA', 'null12'),
+	(3, 'Ron23', '3@gmail.com', 'manch1', 'USA', 'null13'),
+	(4, 'Nemesis12', '4@gmail.com', 'manch2', 'USA', 'null14'),
+	(5, 'Superman3', '5@gmail.com', 'manch3', 'USA', 'null15'),
+	(6, 'Badman', '6@gmail.com', 'manch4', 'USA', 'null16')
